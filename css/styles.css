@@ -1,0 +1,160 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+:root{
+    --principal: #0A3871;
+    --secundario: #F3F5FC;
+    --texto-negrilla: #343A40;
+    --texto-normal: #495057;
+    --blanco: #fff;
+    --btn: #D8DFE8;
+    --hover: #072B61;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: var(--secundario);
+}
+
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo{
+    padding: 3rem;
+}
+
+input{
+    all: unset;
+    min-height: 30rem;
+    width: 100%;
+    color: var(--principal);
+}
+
+input::placeholder{
+    color: var(--principal);
+    font-weight: 400;
+    font-size: 32px;
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    input{
+        min-height: 50rem;
+    }
+}
+
+.alerta{
+    display: flex;
+
+}
+
+.alerta-imagen{
+    height: 1.2rem;
+    margin: auto 0;
+}
+
+.alerta-texto{
+    color: var(--texto-normal);
+    font-weight: 400;
+    font-size: 12px;
+    padding-left: 0.5rem;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+}
+
+.encriptar, 
+.desencriptar{
+    padding: 2rem;
+    border: 1px solid var(--principal);
+    border-radius: 24px;
+    font-size: 1.6rem;
+}
+
+.encriptar{
+    color: var(--blanco);
+    background-color: var(--principal);
+    margin-bottom: 2rem;
+}
+
+.desencriptar{
+    background-color: var(--secundario);
+    color: var(--principal);
+}
+
+.box-salida{
+    background-color: var(--blanco);
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.box-salida img{
+    display: none;
+}
+
+.mensaje{
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin: 1rem;
+}
+
+.feedback{
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin: 1rem;
+}
+
+.footer{
+    text-align: center;
+    color: var(--principal);
+    font-weight: 700;
+    padding: 2rem;
+}
+
+.footer a{
+    text-decoration: none;
+    color: var(--hover);
+}
+
+@media (min-width: 1024px){
+    .principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 5rem;
+    }
+    .botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .encriptar{
+        margin-bottom: 0;
+        margin-right: 2rem;
+        width: 100%;
+    }
+    .desencriptar{
+        width: 100%;
+    }
+    .box-salida{
+        justify-content: center;
+        height: 100%;
+        margin: 0;
+    }
+    .box-salida img{
+        display: block;
+    }
+}

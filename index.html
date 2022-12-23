@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="/img/logo.png" alt="logo">
+        </div>
+    </header>
+    
+    <main class="principal contenedor">
+        <div class="entrada">
+            <div class="texto">
+                <input type="text" placeholder="Ingrese el texto aquí" id="texto" name="texto">
+                <div class="alerta">
+                    <img class="alerta-imagen" src="/img/atencion.png" alt="atencion">
+                    <p class="alerta-texto">Solo letras minúsculas sin acentos</p>
+                </div>
+            </div>
+            <div class="botones">
+                <button class="encriptar">Encriptar</button>
+                <button class="desencriptar">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="box-salida">
+            <img src="/img/imagen.png" alt="imagen">
+            <p class="mensaje">Ningún mensaje fue encontrado</p>
+            <p class="feedback">Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Hecho por <a href="www.linkedin.com/in/cristianps1988">Cristian Peña</a></p>
+    </footer>
+</body>
+</html>
+
+
+
