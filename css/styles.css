@@ -30,29 +30,35 @@ body{
     padding: 3rem;
 }
 
-input{
-    all: unset;
-    min-height: 30rem;
+#texto{
     width: 100%;
+    background-color: var(--secundario);
+    margin-top: 4rem;
+    border: none;
+    font-size: 3.2rem;
     color: var(--principal);
+    resize: none;
 }
 
-input::placeholder{
+#texto::placeholder{
     color: var(--principal);
     font-weight: 400;
     font-size: 32px;
-    width: 100%;
+}
+
+#texto::selection{
+    border: none;
 }
 
 @media (min-width: 768px){
-    input{
+    #texto{
+        margin-top: 12rem;
         min-height: 50rem;
     }
 }
 
 .alerta{
     display: flex;
-
 }
 
 .alerta-imagen{
@@ -73,11 +79,14 @@ input::placeholder{
 }
 
 .encriptar, 
-.desencriptar{
+.desencriptar,
+.btn{
+    cursor: pointer;
     padding: 2rem;
     border: 1px solid var(--principal);
     border-radius: 24px;
     font-size: 1.6rem;
+    transition: transform 200ms;
 }
 
 .encriptar{
@@ -85,10 +94,26 @@ input::placeholder{
     background-color: var(--principal);
     margin-bottom: 2rem;
 }
+.encriptar:hover{
+    background-color: var(--hover);
+    transform: scale(1.05);
+}
 
 .desencriptar{
     background-color: var(--secundario);
     color: var(--principal);
+}
+
+.btn{
+    background-color: var(--blanco);
+    color: var(--principal);
+    display: none;
+}
+
+.desencriptar:hover,
+.btn:hover{
+    background-color: var(--btn);
+    transform: scale(1.05);
 }
 
 .box-salida{
@@ -131,6 +156,9 @@ input::placeholder{
 }
 
 @media (min-width: 1024px){
+    .header{
+        display: inline-block;
+    }
     .principal{
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -156,5 +184,11 @@ input::placeholder{
     }
     .box-salida img{
         display: block;
+    }
+    .entrada{
+        margin-left: 5rem;
+    }
+    #texto{
+        min-height: 63rem;
     }
 }

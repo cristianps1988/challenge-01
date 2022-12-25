@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -21,15 +22,15 @@
     <main class="principal contenedor">
         <div class="entrada">
             <div class="texto">
-                <input type="text" placeholder="Ingrese el texto aquí" id="texto" name="texto">
+                <textarea placeholder="Ingrese el texto aquí" id="texto" name="texto" rows="8" cols="20"></textarea>
                 <div class="alerta">
                     <img class="alerta-imagen" src="/img/atencion.png" alt="atencion">
                     <p class="alerta-texto">Solo letras minúsculas sin acentos</p>
                 </div>
             </div>
             <div class="botones">
-                <button class="encriptar">Encriptar</button>
-                <button class="desencriptar">Desencriptar</button>
+                <button id="encriptar" class="encriptar">Encriptar</button>
+                <button id="desencriptar" class="desencriptar ">Desencriptar</button>
             </div>
         </div>
 
@@ -37,6 +38,7 @@
             <img src="/img/imagen.png" alt="imagen">
             <p class="mensaje">Ningún mensaje fue encontrado</p>
             <p class="feedback">Ingresa el texto que desees encriptar o desencriptar</p>
+            <button id="copiar" class="btn">Copiar</button>
         </div>
     </main>
 
