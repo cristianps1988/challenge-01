@@ -12,6 +12,10 @@ function iniciar() {
 
 function encript(){
     var txt = document.getElementById('texto').value;
+    var msn = document.getElementById('msn');
+    var fb = document.getElementById('fb');
+    var copy = document.getElementById('copiar');
+    var img = document.getElementById('imagen');
 
     for(let i = 0; i < txt.length; i++){
         if(txt[i] == "a"){
@@ -29,12 +33,21 @@ function encript(){
             resultado = resultado + txt[i]
         }
     }
-    console.log('tu palabra/frase encriptada es ' + resultado)
+    msn.innerHTML = resultado
+    msn.style.fontWeight = '400'
+    msn.style.textTransform = 'initial'
+    fb.style.display = 'none'
+    img.style.display = 'none'
+    copy.style.display = 'block'
+
     resultado = ''
 }
 
 function desencript(){
     var txt = document.getElementById('texto').value;
+    var msn = document.getElementById('msn');
+    var fb = document.getElementById('fb');
+    var copy = document.getElementById('copiar');
 
     for(let i = 0; i < txt.length; i++){
         if(txt[i] == "a"){
@@ -57,6 +70,12 @@ function desencript(){
             resultado = resultado + txt[i]
         }
     }
-    console.log('tu palabra/frase encriptada es ' + resultado)
+    msn.innerHTML = resultado
+    msn.style.fontWeight = '400'
+    msn.style.textTransform = 'initial'
+    fb.style.display = 'none'
+    img.style.display = 'none'
+    copy.style.display = 'block'
+
     resultado = ''
 }

@@ -116,6 +116,10 @@ body{
     transform: scale(1.05);
 }
 
+#copiar{
+    margin-top: 3rem;
+}
+
 .box-salida{
     background-color: var(--blanco);
     padding: 3.2rem;
@@ -135,6 +139,7 @@ body{
     font-weight: 700;
     font-size: 2.4rem;
     margin: 1rem;
+    display: block;
 }
 
 .feedback{
