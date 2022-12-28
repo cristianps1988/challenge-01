@@ -30,6 +30,13 @@ body{
     padding: 3rem;
 }
 
+.degradado{
+    color: transparent;
+    background: linear-gradient(to right, red 0%, green 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
 #texto{
     width: 100%;
     background-color: var(--secundario);
@@ -140,6 +147,10 @@ body{
     font-size: 2.4rem;
     margin: 1rem;
     display: block;
+}
+
+.mensaje::first-letter{
+    text-transform: capitalize;
 }
 
 .feedback{

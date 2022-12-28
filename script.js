@@ -8,6 +8,13 @@ function iniciar() {
 
     let desencriptar = document.getElementById("desencriptar")
     desencriptar.addEventListener('click', desencript)
+
+    let copiar = document.getElementById("copiar")
+    copiar.addEventListener('click', async (event) => {
+        const content = document.getElementById('msn').textContent;
+        await navigator.clipboard.writeText(content)
+        swal("", "Mensaje copiado", "info");
+    })
 }
 
 function encript(){
@@ -35,11 +42,10 @@ function encript(){
     }
     msn.innerHTML = resultado
     msn.style.fontWeight = '400'
-    msn.style.textTransform = 'initial'
     fb.style.display = 'none'
     img.style.display = 'none'
     copy.style.display = 'block'
-
+    swal("", "Mensaje encriptado", "success");
     resultado = ''
 }
 
@@ -48,6 +54,7 @@ function desencript(){
     var msn = document.getElementById('msn');
     var fb = document.getElementById('fb');
     var copy = document.getElementById('copiar');
+    var img = document.getElementById('imagen');
 
     for(let i = 0; i < txt.length; i++){
         if(txt[i] == "a"){
@@ -72,10 +79,9 @@ function desencript(){
     }
     msn.innerHTML = resultado
     msn.style.fontWeight = '400'
-    msn.style.textTransform = 'initial'
     fb.style.display = 'none'
     img.style.display = 'none'
     copy.style.display = 'block'
-
+    swal("", "Mensaje desencriptado", "success");
     resultado = ''
 }
