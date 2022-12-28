@@ -8,6 +8,7 @@ html {
 
 :root{
     --principal: #0A3871;
+    --azulClaro: #4d97f2;
     --secundario: #F3F5FC;
     --texto-negrilla: #343A40;
     --texto-normal: #495057;
@@ -18,7 +19,12 @@ html {
 
 body{
     font-family: 'Inter', sans-serif;
-    background: var(--secundario);
+    /* background: var(--secundario); */
+    background-image: url(/img/prueba.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .contenedor{
@@ -32,14 +38,14 @@ body{
 
 .degradado{
     color: transparent;
-    background: linear-gradient(to right, red 0%, green 100%);
+    background: linear-gradient(to right, var(--principal) 0%, var(--azulClaro) 100%);
     -webkit-background-clip: text;
     background-clip: text;
 }
 
 #texto{
     width: 100%;
-    background-color: var(--secundario);
+    background-color: transparent;
     margin-top: 4rem;
     border: none;
     font-size: 3.2rem;
@@ -98,17 +104,37 @@ body{
 
 .encriptar{
     color: var(--blanco);
-    background-color: var(--principal);
+    /* background-color: var(--principal); */
     margin-bottom: 2rem;
+
+    background: rgba( 10, 56, 113, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .encriptar:hover{
-    background-color: var(--hover);
+    /* background-color: var(--hover); */
+    background: rgba(4, 35, 74, 0.75);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     transform: scale(1.05);
 }
 
 .desencriptar{
-    background-color: var(--secundario);
+    /* background-color: var(--secundario); */
     color: var(--principal);
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .btn{
@@ -128,7 +154,7 @@ body{
 }
 
 .box-salida{
-    background-color: var(--blanco);
+    /* background-color: var(--blanco); */
     padding: 3.2rem;
     display: flex;
     flex-direction: column;
@@ -136,6 +162,13 @@ body{
     border-radius: 32px;
     margin-top: 5rem;
     text-align: center;
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .box-salida img{
