@@ -1,9 +1,17 @@
 <h1 align="center">Hi 👋, I'm Cristian</h1>
+
 <h3 align="center">Challenge ONE Principiante en programación Grupo 4</h3>
 
-- 🌱 I’m currently learning **HTML, CSS, Javascript**
+![](https://github.com/cristianps1988/challenge-01/blob/dfc4db414c92c4e0368d5f3e71f81ab3a75094fd/img/desktop.png)
 
-- 📫 How to reach me **cristianps_1@hotmail.com**
+![](https://github.com/cristianps1988/challenge-01/blob/dfc4db414c92c4e0368d5f3e71f81ab3a75094fd/img/tablet.png)
+
+![](https://github.com/cristianps1988/challenge-01/blob/dfc4db414c92c4e0368d5f3e71f81ab3a75094fd/img/mobile.png)
+
+
+- 🌱 Actualmente estoy aprendiendo **HTML, CSS, Javascript**
+
+- 📫 Me puedes contactar **cristianps_1@hotmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
