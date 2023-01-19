@@ -105,7 +105,6 @@ body{
 
 .encriptar{
     color: var(--blanco);
-    /* background-color: var(--principal); */
     margin-bottom: 2rem;
 
     background: rgba( 10, 56, 113, 0.55 );
@@ -116,7 +115,6 @@ body{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .encriptar:hover{
-    /* background-color: var(--hover); */
     background: rgba(4, 35, 74, 0.75);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4.5px );
@@ -193,7 +191,14 @@ body{
     text-align: center;
     color: var(--principal);
     font-weight: 700;
+    font-size: 1.2rem;
     padding: 2rem;
+}
+
+.icon{
+    padding: 0 0.5rem;
+    font-size: 2rem;
+    color: var(--principal);
 }
 
 @media (min-width: 1024px){
@@ -202,6 +207,7 @@ body{
     }
     .principal{
         display: grid;
+        margin-top: -5rem;
         grid-template-columns: 2fr 1fr;
         gap: 5rem;
     }
