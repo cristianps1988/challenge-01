@@ -1,10 +1,10 @@
 window.addEventListener("load", iniciar)
 
-var resultado = ''
+let resultado = ''
 
 function iniciar() {
     let encriptar = document.getElementById("encriptar")
-    encriptar.addEventListener('click', encript)
+    encriptar.addEventListener('click', obtenerTexto)
 
     let desencriptar = document.getElementById("desencriptar")
     desencriptar.addEventListener('click', desencript)
@@ -17,30 +17,40 @@ function iniciar() {
     })
 }
 
-function encript(){
+function obtenerTexto(){
     var txt = document.getElementById('texto').value;
-    var msn = document.getElementById('msn');
-    var fb = document.getElementById('fb');
-    var copy = document.getElementById('copiar');
-    var img = document.getElementById('imagen');
+    return validar(txt) ? encript(txt): swal("Error", "Solo puedes utilizar letras minúsculas sin acentos", "error");
+}
+
+function encript(txt){
+    let msn = document.getElementById('msn');
+    let fb = document.getElementById('fb');
+    let copy = document.getElementById('copiar');
+    let img = document.getElementById('imagen');
 
     for(let i = 0; i < txt.length; i++){
-        if(txt[i] == "a"){
-            resultado = resultado + "ai"
-        } else if (txt[i] == "e") {
-            resultado = resultado + "enter"
-        } else if (txt[i] == "i") {
-            resultado = resultado + "imes"
-        } else if (txt[i] == "o") {
-            resultado = resultado + "ober"
-        } else if (txt[i] == "u") {
-            resultado = resultado + "ufat"
-        } 
-        else{
-            resultado = resultado + txt[i]
+        switch (txt[i]) {
+            case 'a':
+                resultado = resultado + "ai"
+                break;
+            case 'e':
+                resultado = resultado + "enter"
+                break;
+            case 'i':
+                resultado = resultado + "imes"
+                break;
+            case 'o':
+                resultado = resultado + "ober"
+                break;
+            case 'u':
+                resultado = resultado + "ufat"
+                break;
+            default:
+                resultado = resultado + txt[i]
+                break;
         }
     }
-    msn.innerHTML = resultado
+    msn.innerHTML = resultado;
     msn.style.fontWeight = '400'
     fb.style.display = 'none'
     img.style.display = 'none'
@@ -50,32 +60,62 @@ function encript(){
 }
 
 function desencript(){
-    var txt = document.getElementById('texto').value;
-    var msn = document.getElementById('msn');
-    var fb = document.getElementById('fb');
-    var copy = document.getElementById('copiar');
-    var img = document.getElementById('imagen');
+    let txt = document.getElementById('texto').value;
+    let msn = document.getElementById('msn');
+    let fb = document.getElementById('fb');
+    let copy = document.getElementById('copiar');
+    let img = document.getElementById('imagen');
+    const a = 1;
+    const b = 4;
+    const c = 3;
+    
 
     for(let i = 0; i < txt.length; i++){
-        if(txt[i] == "a"){
-            resultado = resultado + "a"
-            i = i + 1
-        } else if (txt[i] == "e") {
-            resultado = resultado + "e"
-            i = i + 4
-        } else if (txt[i] == "i") {
-            resultado = resultado + "i"
-            i = i + 3
-        } else if (txt[i] == "o") {
-            resultado = resultado + "o"
-            i = i + 3
-        } else if (txt[i] == "u") {
-            resultado = resultado + "u"
-            i = i + 3
-        } 
-        else{
-            resultado = resultado + txt[i]
+        switch (txt[i]) {
+            case 'a':
+                resultado = resultado + "a"
+                i = i + a;
+                break;
+            case 'e':
+                resultado = resultado + "e"
+                i = i + b;
+                break;
+            case 'i':
+                resultado = resultado + "i"
+                i = i + c;
+                break;
+            case 'o':
+                resultado = resultado + "o"
+                i = i + c;
+                break;
+            case 'u':
+                resultado = resultado + "u"
+                i = i + c;
+                break;
+            default:
+                resultado = resultado + txt[i]
+                break;
         }
+
+        // if(txt[i] == "a"){
+        //     resultado = resultado + "a"
+        //     i = i + a;
+        // } else if (txt[i] == "e") {
+        //     resultado = resultado + "e"
+        //     i = i + b;
+        // } else if (txt[i] == "i") {
+        //     resultado = resultado + "i"
+        //     i = i + c;
+        // } else if (txt[i] == "o") {
+        //     resultado = resultado + "o"
+        //     i = i + c;
+        // } else if (txt[i] == "u") {
+        //     resultado = resultado + "u"
+        //     i = i + c;
+        // } 
+        // else{
+        //     resultado = resultado + txt[i]
+        // }
     }
     msn.innerHTML = resultado
     msn.style.fontWeight = '400'
@@ -84,4 +124,8 @@ function desencript(){
     copy.style.display = 'block'
     swal("", "Mensaje desencriptado", "success");
     resultado = ''
+}
+
+function validar(text) {
+    return text ? !/[^a-z\sñ]/.test(text) : true;
 }
