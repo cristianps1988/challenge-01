@@ -22,6 +22,10 @@ function obtenerTexto(){
     return validar(txt) ? encript(txt): swal("Error", "Solo puedes utilizar letras minúsculas sin acentos", "error");
 }
 
+function validar(text) {
+    return text ? !/[^a-z\sñ]/.test(text) : true;
+}
+
 function encript(txt){
     let msn = document.getElementById('msn');
     let fb = document.getElementById('fb');
@@ -96,26 +100,6 @@ function desencript(){
                 resultado = resultado + txt[i]
                 break;
         }
-
-        // if(txt[i] == "a"){
-        //     resultado = resultado + "a"
-        //     i = i + a;
-        // } else if (txt[i] == "e") {
-        //     resultado = resultado + "e"
-        //     i = i + b;
-        // } else if (txt[i] == "i") {
-        //     resultado = resultado + "i"
-        //     i = i + c;
-        // } else if (txt[i] == "o") {
-        //     resultado = resultado + "o"
-        //     i = i + c;
-        // } else if (txt[i] == "u") {
-        //     resultado = resultado + "u"
-        //     i = i + c;
-        // } 
-        // else{
-        //     resultado = resultado + txt[i]
-        // }
     }
     msn.innerHTML = resultado
     msn.style.fontWeight = '400'
@@ -124,8 +108,4 @@ function desencript(){
     copy.style.display = 'block'
     swal("", "Mensaje desencriptado", "success");
     resultado = ''
-}
-
-function validar(text) {
-    return text ? !/[^a-z\sñ]/.test(text) : true;
 }
